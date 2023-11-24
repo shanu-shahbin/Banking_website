@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-dark bg-primary">
+    <h4>HSBC Banking Service</h4></nav>
+    <center><h1>Login Here</h1></center>
+<form action="/login/" method="Post">
+    {% csrf_token %}
+   <center>
+       </label>
+       <br> <br><input type="text" name="username" placeholder="Username"><br><br><br>
+    <input type="password" name="password" placeholder="Password"><br><br><br>
+    <input type="submit" value="Sign-in"><br><br>
+    Do you haven't a account <a href="/register/">Register here</a></center>
+</form>
+{% for msg in messages %}
+<script>
+
+alert({{msg});
+{% endfor %}
+</script>
+{% endblock %}
+

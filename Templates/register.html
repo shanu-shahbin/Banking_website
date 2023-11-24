@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <style>
+        body {
+            background-image: url('{% static "img/bank3.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* This ensures that the background takes up the full height of the viewport */
+            margin: 0; /* Removes default margin on body */
+        }
+            h4 {
+      text-align: center;
+    }
+
+    </style>
+</head>
+<nav class="navbar navbar-dark bg-primary">
+<h4 style="text-align: center; padding-left: 500px;">HSBC Banking Service</h4>
+</nav>
+
+<center><h1 style= "padding-top: 50px; color: white;">Register here</h1></center><br><br>
+<form action="/register/" method="post">
+    {% csrf_token %}
+    <center><input type="text" name="username" placeholder="User Name"></center><br><br>
+    <center><input type="password" name="password" placeholder="Password"></center><br><br>
+    <center><input type="password" name="cpassword" placeholder="Confirm Password"></center><br><br>
+    <center><input type="submit"></center>
+</form>
+{% for msg in messages %}
+<h4 style="color: red; font-weight: bold;">{{msg}}</h4>
+{% endfor %}
+{% endblock %}

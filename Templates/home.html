@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="font-size: 30px; color: black; font-weight: bold">HSBC BANK</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+<li class="nav-item">
+    <a href="register" class="btn btn-info" style="padding-left: 20px; padding-right: 20px; margin-right: 10px;">REGISTER HERE</a>
+</li>
+<li class="nav-item">
+    <a href="login" class="btn btn-success" style="padding-left: 20px; padding-right: 20px;">LOGIN HERE</a>
+</li>
+
+          <div class="dropdown show" style="padding-left: 350px; padding-top: 10px; font-size: 25px;">
+        <select onChange="window.location.href=this.value">
+          <option value="value">BRANCHES</option>
+          <option value="https://en.wikipedia.org/wiki/Wayanad_district">Wayanad</option>
+          <option value="https://en.wikipedia.org/wiki/Kozhikode">Calicut</option>
+          <option value="https://en.wikipedia.org/wiki/Kannur">Kannur</option>
+          <option value="https://en.wikipedia.org/wiki/Kasaragod">Kasaragod</option>
+          <option value="https://en.wikipedia.org/wiki/Thrissur">Thrissur</option>
+        </select>
+      </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<img class="my_image my_image_padding" src="{% static 'img/bank2.jpg' %}" alt="img" style="width: 100%;" height="570px;">
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<nav class="navbar navbar-dark bg-primary">-->
+<!--    <h1>Welcome to ABC Banking Service</h1>-->
+<!--    <a href="login" class="btn btn-success">LOGIN HERE</a>-->
+<!--    <a href="register" class="btn btn-success">REGISTER HERE</a>-->
+<!--    <div class="dropdown show">-->
+<!--        <select onChange="window.location.href=this.value">-->
+<!--            <option value="value">BRANCHES</option>-->
+<!--            <option value="https://en.wikipedia.org/wiki/Wayanad_district">Wayanad</option>-->
+<!--            <option value="https://en.wikipedia.org/wiki/Kozhikode">Calicut</option>-->
+<!--            <option value="https://en.wikipedia.org/wiki/Kannur">Kannur</option>-->
+<!--            <option value="https://en.wikipedia.org/wiki/Kasaragod">Kazaragod</option>-->
+<!--            <option value="https://en.wikipedia.org/wiki/Thrissur">Thrissur</option>-->
+<!--        </select>-->
+<!--    </div>-->
+<!--</nav>-->
